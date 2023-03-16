@@ -75,6 +75,7 @@ public class Main {
         s.setId(id);
 
         studentDAO.deleteStudent(id);
+        System.out.printf("Nhân viên mã %s đã được xóa thành công \n", id);
     }
 
     private static void function4(Scanner in) throws SQLException {
