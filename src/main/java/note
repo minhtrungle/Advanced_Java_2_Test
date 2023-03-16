@@ -1,0 +1,14 @@
+CREATE DATABASE StudentManagement;
+USE StudentManagement;
+
+DROP TABLE IF EXISTS students;
+CREATE TABLE IF NOT EXISTS students(
+id VARCHAR(10) PRIMARY KEY NOT NULL,
+full_name VARCHAR(30) NOT NULL,
+gender tinyint(1) NOT NULL,
+birthday VARCHAR(30) NOT NULL UNIQUE,
+address VARCHAR(30) NOT NULL,
+phone VARCHAR(10) NOT NULL,
+email VARCHAR(30) NOT NULL,
+gpa DOUBLE
+) ENGINE=InnoDB;
