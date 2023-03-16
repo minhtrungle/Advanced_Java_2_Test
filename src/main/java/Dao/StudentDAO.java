@@ -134,7 +134,7 @@ public class StudentDAO {
             throw new RuntimeException("Không có học sinh thõa mãn");
         }
 
-        final String sql = String.format("UPDATE `students` SET `full_name`='%s',`gender`='%d',`birthday`='%s',`address`='%s',`phone`='%s', `email`='%s',`gpa`='%f' WHERE `id` = '%s'",
+        final String sql = String.format("UPDATE `students` SET `full_name`='%s',`gender`='%d',`birthday`='%s',`address`='%s',`phone`='%s',`email`='%s',`gpa`='%f' WHERE `id` = '%s'",
                 s.getFullName(), s.getGender(), s.getBirthday(), s.getAddress(), s.getPhone(), s.getEmail(), s.getGpa(), id);
 
         try {

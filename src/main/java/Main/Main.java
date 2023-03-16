@@ -72,7 +72,7 @@ public class Main {
     private static void function3(Scanner in) throws SQLException {
         System.out.println("Nhập mã sinh viên muốn xóa: ");
         String id = in.nextLine();
-
+        s.setId(id);
 
         studentDAO.deleteStudent(id);
     }
@@ -116,15 +116,13 @@ public class Main {
     private static void function5(Scanner in) throws SQLException {
         System.out.println("Nhập mã sinh viên muốn tìm: ");
         String stdId = in.nextLine();
-        s.setId(stdId);
 
-        studentDAO.getByID(stdId);
+        System.out.println(studentDAO.getByID(stdId));
 
-        System.out.println("Nhập tên sinh viên muốn tìm: ");
-        String stdName = in.nextLine();
-        s.setFullName(stdName);
-
-        studentDAO.getByName(stdName);
+//        System.out.println("Nhập tên sinh viên muốn tìm: ");
+//        String stdName = in.nextLine();
+//
+//        System.out.println(studentDAO.getByName(stdName));
 
     }
 
@@ -145,7 +143,7 @@ public class Main {
     private static void function7() throws SQLException {
         List<Student> studentList = studentDAO.getAllStudent();
         studentList.stream()
-                .filter(student -> student.getGender() == 0 && student.getAddress() == "Hà Nội" && student.getGpa() > 2.5)
+                .filter(student -> student.getGender() == 0 && student.getAddress().equals("Hà Nội") && student.getGpa() > 2.5)
                 .sorted((o1, o2) -> {
                     if (o1.getGpa() > o2.getGpa()) {
                         return 1;
