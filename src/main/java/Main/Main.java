@@ -119,10 +119,10 @@ public class Main {
 
         System.out.println(studentDAO.getByID(stdId));
 
-//        System.out.println("Nhập tên sinh viên muốn tìm: ");
-//        String stdName = in.nextLine();
-//
-//        System.out.println(studentDAO.getByName(stdName));
+        System.out.println("Nhập tên sinh viên muốn tìm: ");
+        String stdName = in.nextLine();
+
+        System.out.println(studentDAO.getByName(stdName));
 
     }
 
